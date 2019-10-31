@@ -99,13 +99,15 @@ with open(service_file, 'r') as file:
             #print('EXP')
             #print(repr(e))
             pass
-print('SL: %s' % services_list)
+#print('SL: %s' % services_list)
+
 
 service_id=1
 service_url='insert_url'
 service_description='insert_description'
 service_text='<services>\n'
-for service_key, service_value in services_list.items():
+for service_key in sorted(services_list.keys()):
+    service_value=services_list[service_key]
     service_text+='  <service id="%s" name="%s">\n' % (service_id, service_key)
     service_id+=1
     #service_text+='    <description>%s</description>\n' % service_description
