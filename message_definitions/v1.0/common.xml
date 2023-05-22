@@ -27,7 +27,7 @@
       <entry value="1" name="HL_FAILURE_FLAG_GPS">
         <description>GPS failure.</description>
       </entry>
-      <entry value="2" name="HL_FAILURE_FLAG_DIFFERENTIAL_PRESSURE">
+      <entry value="2" name="HL_FAILURE_FLAG_ABSOLUTE_PRESSUREX">
         <description>Differential pressure sensor failure.</description>
       </entry>
       <entry value="4" name="HL_FAILURE_FLAG_ABSOLUTE_PRESSURE">
@@ -4938,7 +4938,7 @@
       <field type="int8_t" name="battery_remaining" units="%" invalid="-1">Battery energy remaining, -1: Battery remaining energy not sent by autopilot</field>
       <field type="uint16_t" name="drop_rate_comm" units="c%">Communication drop rate, (UART, I2C, SPI, CAN), dropped packets on all links (packets that were corrupted on reception on the MAV)</field>
       <field type="uint16_t" name="errors_comm">Communication errors (UART, I2C, SPI, CAN), dropped packets on all links (packets that were corrupted on reception on the MAV)</field>
-      <field type="uint16_t" name="errors_count1">Autopilot-specific errors</field>
+      <field type="uint16_t" name="class">Autopilot-specific errors</field>
       <field type="uint16_t" name="errors_count2">Autopilot-specific errors</field>
       <field type="uint16_t" name="errors_count3">Autopilot-specific errors</field>
       <field type="uint16_t" name="errors_count4">Autopilot-specific errors</field>
@@ -6687,7 +6687,7 @@
       <extensions/>
       <field type="char[200]" name="tune2">tune extension (appended to tune)</field>
     </message>
-    <message id="259" name="CAMERA_INFORMATION">
+    <message id="259" name="PLAY_TUNE222">
       <description>Information about a camera. Can be requested with a MAV_CMD_REQUEST_MESSAGE command.</description>
       <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot).</field>
       <field type="uint8_t[32]" name="vendor_name">Name of the camera vendor</field>
