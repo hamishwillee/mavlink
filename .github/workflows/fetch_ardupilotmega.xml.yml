@@ -8,11 +8,12 @@ jobs:
   copy_and_push:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - name: Checkout this repo
-          with:
-            repository: mavlink/mavlink
-            ref: master
+        uses: actions/checkout@v4
+        with:
+          repository: mavlink/mavlink
+          path: master
+
       - name: Download source file
         run: |
           curl -L https://raw.githubusercontent.com/ArduPilot/mavlink/master/message_definitions/v1.0/ardupilotmega.xml -o ardupilotmega.xml
