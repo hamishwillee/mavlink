@@ -17,6 +17,8 @@ jobs:
       - name: Download source file
         run: |
           curl -L https://raw.githubusercontent.com/ArduPilot/mavlink/master/message_definitions/v1.0/ardupilotmega.xml -o ardupilotmega.xml
+      - name: Printile
+        run: ls
       - name: Copy file
         run: mv -f ardupilotmega.xml mavlink/message_definitions/v1.0/
       - name: Add and commit changes
