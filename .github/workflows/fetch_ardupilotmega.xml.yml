@@ -18,7 +18,7 @@ jobs:
         run: |
           curl -L https://raw.githubusercontent.com/ArduPilot/mavlink/master/message_definitions/v1.0/ardupilotmega.xml -o ardupilotmega.xml
       - name: Copy file
-        run: mv ardupilotmega.xml message_definitions/v1.0/
+        run: mv -f ardupilotmega.xml mavlink/message_definitions/v1.0/
       - name: Add and commit changes
         run: |
           git config --global user.name "${{ secrets.PX4BUILDBOT_USER }}"
